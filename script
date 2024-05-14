@@ -11,5 +11,5 @@ echo "CMD python3 server.py" >> Dockerfile
 docker stop samrun
 docker rm samrun
 docker build -t sample .
-docker run -t -d -p 8090:8090 --name samrun sample 
+docker run -t -d -p 5000:5000 --name samrun sample 
 docker ps -a
