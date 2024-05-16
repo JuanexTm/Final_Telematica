@@ -6,6 +6,9 @@ echo "RUN pip install -r /home/requeriments.txt" >> Dockerfile
 echo "EXPOSE 5000 " >> Dockerfile
 echo "WORKDIR /home/app/" >> Dockerfile
 echo "COPY server.py . " >> Dockerfile
+echo "RUN mkdir templates" >> Dockerfile
+echo "RUN cd templates" >> Dockerfile
+echo "COPY templates/teka-gas.html ." >> Dockerfile
 echo "CMD python3 server.py" >> Dockerfile
 
 docker stop samrun
