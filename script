@@ -8,7 +8,7 @@ echo "WORKDIR /home/app/" >> Dockerfile
 echo "COPY server.py . " >> Dockerfile
 echo "RUN mkdir templates" >> Dockerfile
 echo "RUN cd templates" >> Dockerfile
-echo "COPY templates/teka-gas.html ." >> Dockerfile
+echo "COPY templates/teka-gas.html /home/app/templates/." >> Dockerfile
 echo "CMD python3 server.py" >> Dockerfile
 
 docker stop samrun
